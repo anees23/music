@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-image: url(OIP.jpg);
+    background-size: cover;
+}
+ul{
+    list-style-type:none;
+}
+li{
+    margin: spx;
+    padding: 5px;
+    font-size: 33px;
+    color: white;
+}
+li a:hover{color: brown(255, 0,0);
+}
+li a{
+    text-decoration: none;
+    color: black(0,0,0)
+}
+li{
+    float: left;
+}
+img{
+    margin-top: 8%;
+    margin-left: 8%;
+}
+</style>
+</head>
+</body>
+<center><h1><u>MUSIC ZONE</u></h1></center>
+<ul>
+    <li><a href="song">songs</a></li>
+    <li><a href="search">search</a></li>
+    <li><a href="languages">languages</a></li>
+    <li><a href="favorite">favorite</a></li>
+    </ul><br>
+
+<center> <img src="play.jpg"
+width="70px" height="70px" id="icon"></center>
+<audio id="song">
+    <source src="Tere-Vaaste(PaglaSongs).mp3" type="audio/mp3">
+</audio>
+<script>
+var mysound=document.getElementById("song");
+var icon= document.getElementById("icon");
+icon.onclick = function() {
+    if (mysound.paused) {
+        mysound.play();
+        icon.src = "play.jpg";
+    } else {
+        mysound.pause();
+        icon.src = "pause.jpg";
+    }
+}
+</script>
+</body>
+</html>
